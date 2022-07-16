@@ -22,10 +22,9 @@ jobs:
              
       steps:
            
-         - name: log node version
+         - name: multiline script 
            run: |
-             node: -v
-             cat /etc/os-release
-                
+             node -v 
+             npm -v
            
           
