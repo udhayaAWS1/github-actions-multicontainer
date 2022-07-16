@@ -1,5 +1,5 @@
 #!/bin/sh
-chmod +X script.sh
+chmod +x script.sh
 echo $1
 echo "Hello World"
 
