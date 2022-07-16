@@ -1,0 +1,34 @@
+name: container
+
+on: push
+
+jobs:
+  
+   node-docker:
+      runs-on: ubuntu-latest
+      services:
+        app: 
+          
+          image: alialaa17/node-api
+          
+          ports: 
+             - 3001:3000
+          
+        mongo:
+          
+           image: mongo
+           ports: 
+             - "2017:2017"
+             
+      steps:
+           
+         - name: login to run
+           run: |
+             node -v 
+             npm -v
+           
+      steps:
+        - name: Post a user
+          run: 'curl -X POST http://localhost:3001/api/user -H ''Content-Type: application/json'' -d ''{"username": "hello","address": "dwded"}'''
+        - name: Get Users
+          run: curl http://localhost:3001/api/users  
