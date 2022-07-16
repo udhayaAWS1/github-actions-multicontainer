@@ -22,7 +22,7 @@ jobs:
              
       steps:
            
-         - name: multiline script 
+         - name: login to run
            run: |
              node -v 
              npm -v
